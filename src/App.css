@@ -28,7 +28,7 @@ body {
   color: white;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 0 5rem;
+  padding: 0 6rem;
 
 }
 
@@ -116,6 +116,7 @@ body {
   padding: 0.5rem 2rem 0.5rem 0.5rem;
   color: rgb(100, 100, 100);
   font-weight: 100;
+
 }
 
 .button {
@@ -128,6 +129,7 @@ body {
   box-shadow: inset 0px -8px 35px -1px rgba(0, 0, 0, 0.247);
   border: none;
   color: white;
+  outline: none;
 }
 
 .button:hover {
@@ -181,6 +183,7 @@ body {
   margin-top: 2rem;
   position: relative;
   top: 2rem;
+  padding: 10px 10px;
 }
 
 .panelCurrent {
@@ -203,8 +206,8 @@ body {
 }
 
 .current, .day {
-  width: 40%;
-  height: 18%;
+  width: 80%;
+  height: 80%;
   margin-top: 5rem;
   transition: 0.5s;
   border-radius: 10px;

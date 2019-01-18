@@ -8,6 +8,7 @@ import Forecast from './Components/Forecast';
 import { Router, Link } from '@reach/router';
 
 
+
 class App extends Component {
   state = {
     location: 'location',
@@ -73,6 +74,7 @@ class App extends Component {
   
         const { description, main } = dataWeather.weather[0];
         const { list } = forecastData;
+        console.log(dataWeather);
         const filteredList = list.filter(element => element.dt_txt.includes('12:00:00'));
         const forecastDataObject = filteredList.reduce((arr, curr) => {          
           arr.push(
@@ -114,7 +116,9 @@ class App extends Component {
       const { location } = this.state;
       const { data } = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=8dfe209e2c6bf6698c6df408d5d0c51c`);
       return data;
-    } catch (error) {}
+    } catch (error) {
+      console.log(error)
+    }
   };
 
   fetchForecastData = async () => {
@@ -123,7 +127,9 @@ class App extends Component {
       const { data } = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${location}&APPID=8dfe209e2c6bf6698c6df408d5d0c51c`);
 
       return data;
-    } catch (error) {}
+    } catch (error) {
+      console.log(error)
+    }
   };
 
   updateSearch = item => {
