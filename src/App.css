@@ -26,14 +26,28 @@ body {
 
 .nav {
   color: white;
-  padding: 5%;
   text-decoration: none;
   text-transform: uppercase;
+  padding: 0 5rem;
+
 }
 
 .navbar {
   background-color: rgba(128, 128, 128, 0.301);
   padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media (max-width: 60rem) {
+  .navbar {
+    flex-direction: column;
+  }
+  .nav { 
+      padding: 1rem 0;
+      border-bottom: 1px solid white;
+  }
 }
 
 .leaflet-container {
