@@ -1,0 +1,234 @@
+body {
+  background-image: url("https://images.pexels.com/photos/50632/pexels-photo-50632.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 3rem;
+  background-color: rgba(70, 69, 69, 0.116);
+  padding: 3rem;
+  border-bottom: 1px solid white;
+  letter-spacing: 2px;
+}
+
+.App {
+  text-align: center;
+}
+
+.nav {
+  color: white;
+  padding: 5%;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.navbar {
+  background-color: rgba(128, 128, 128, 0.301);
+  padding: 0.5rem;
+}
+
+.leaflet-container {
+  height: 25rem;
+  width: 50rem;
+  flex-grow: 1;
+  margin: 0 3rem;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.emoji {
+  height: 3rem;
+  width: auto;
+}
+
+.panel {
+  background-color: rgba(146, 146, 146, 0.548);
+  width: 15rem;
+  height: 28rem;
+  margin-right: 3rem;
+  border-radius: 10px;
+  box-shadow: inset 0px -8px 35px -1px rgba(0, 0, 0, 0.75);
+}
+
+.panel > h2 {
+  color: white;
+  font-weight: 300;
+  border: 1px solid white;
+  width: 12rem;
+  margin: 2rem auto;
+  border-radius: 10px;
+  padding: 5px 0;
+  text-transform: uppercase;
+}
+
+.grid {
+  display: flex;
+  flex-direction: row;
+  margin-top: 4rem;
+}
+
+@media (max-width: 60rem) {
+  .grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .leaflet-container {
+    width: 80%;
+  }
+  .panel {
+    margin: 2rem 0;
+  }
+}
+
+.form {
+  margin-top: 2rem;
+}
+
+.input {
+  font-size: 1rem;
+  border-radius: 10px;
+  outline: none;
+  margin-right: 1rem;
+  padding: 0.5rem 2rem 0.5rem 0.5rem;
+  color: rgb(100, 100, 100);
+  font-weight: 100;
+}
+
+.button {
+  padding: 0.8rem 3rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+  background-color: rgba(143, 140, 140, 0.295);
+  box-shadow: inset 0px -8px 35px -1px rgba(0, 0, 0, 0.247);
+  border: none;
+  color: white;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+.panelItem  {
+  color: white;
+  border: 1px solid rgba(185, 185, 185, 0.295);
+  width: 12rem;
+  margin: 8px auto;
+  border-radius: 10px;
+  padding: 5px 0;
+  font-weight: 100;
+  background-color: rgba(71, 71, 71, 0.616);
+
+}
+
+.panelForecast {
+  margin-top: 2rem;
+}
+
+.changeTemp {
+  padding: 0.7rem 2rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+  background-color: rgba(71, 71, 71, 0.795);
+  color: white;
+  margin-top: 10px;
+  outline: none;
+  border: none;
+}
+
+.changeTemp:hover {
+  transform: scale(1.1);
+}
+
+.panelForecastContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.panel {
+  margin: 1rem auto 3rem auto;
+}
+
+#root > div > div:nth-child(4) > div > div.panelCurrent > div > h2{
+  margin-top: 2rem;
+  position: relative;
+  top: 2rem;
+}
+
+.panelCurrent {
+  position: relative;
+  bottom: 2rem;
+  margin-right: 3rem;
+}
+
+@media (max-width: 60rem) {
+  .panelCurrent {
+    margin-top: 2rem;
+  }
+}
+
+
+.home {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.current, .day {
+  width: 40%;
+  height: 18%;
+  margin-top: 5rem;
+  transition: 0.5s;
+  border-radius: 10px;
+  
+}
+
+.current:hover, 
+.day:hover {
+  transform: scale(1.05)
+}
+
+.current {
+  margin-left: 6%;
+}
+
+.day {
+  margin-right: 6%;
+}
+
+@media (max-width: 60rem) {
+  .home {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+  }
+
+  .current,
+  .day {
+    margin: 0;
+    width: 80%;
+    height: auto;
+    align-items: center;
+  }
+
+  .day {
+    margin: 2rem 0;
+  }
+}
+
+
+
